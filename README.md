@@ -127,7 +127,7 @@ flutter run
 ## 👨‍💻 Author
 
 **Prateek Kumar**  
-Flutter Developer (Internship Project)  
+Flutter Developer 
 📍 India  
 
 ## 📜 License
