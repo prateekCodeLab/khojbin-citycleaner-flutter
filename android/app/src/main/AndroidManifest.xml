@@ -3,7 +3,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
-        android:label="khojbin"
+        android:label="CityCleaner"
         android:icon="@mipmap/ic_launcher">
 
         <activity

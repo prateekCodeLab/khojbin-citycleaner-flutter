@@ -19,7 +19,7 @@ class AppHeader extends StatelessWidget {
             const Icon(Icons.delete_outline, color: Colors.blue),
             const SizedBox(width: 8),
             const Text(
-              "KhojBin",
+              "CityCleaner",
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w600,

@@ -1,13 +1,13 @@
-# 🗺️ KhojBin – CityCleaner App
+# 🗺️ CityCleaner – CityCleaner App
 
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev/)
 [![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev/)
 
-KhojBin is a **map-based civic utility mobile application** built with **Flutter**, empowering citizens to **locate nearby public dustbins**, **report issues**, and **contribute to a cleaner city**. Developed following a **Figma-first UI approach** for clean, usable, and scalable design.
+CityCleaner is a **map-based civic utility mobile application** built with **Flutter**, empowering citizens to **locate nearby public dustbins**, **report issues**, and **contribute to a cleaner city**. Developed following a **Figma-first UI approach** for clean, usable, and scalable design.
 
 ## 🚀 Project Objective
 
-KhojBin aims to:
+CityCleaner aims to:
 - Enable users to find nearby dustbins via an interactive live map
 - Facilitate reporting of dustbin-related issues by citizens
 - Promote public participation in city cleanliness initiatives
