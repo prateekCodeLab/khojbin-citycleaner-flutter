@@ -1,136 +1,167 @@
-# 🗺️ CityCleaner – CityCleaner App
+# 🗺️ CityCleaner – Civic Cleanliness & Navigation App
 
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev/)
 [![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev/)
+[![OpenStreetMap](https://img.shields.io/badge/OpenStreetMap-7EBC6F?style=for-the-badge&logo=openstreetmap&logoColor=white)](https://www.openstreetmap.org/)
 
-CityCleaner is a **map-based civic utility mobile application** built with **Flutter**, empowering citizens to **locate nearby public dustbins**, **report issues**, and **contribute to a cleaner city**. Developed following a **Figma-first UI approach** for clean, usable, and scalable design.
+CityCleaner is a **map-based civic utility mobile application** built using **Flutter**, designed to help citizens **locate nearby public dustbins**, **navigate to them**, **report issues**, and actively **participate in keeping cities clean**.
+
+The app follows a **Figma-first development approach** and focuses on **real-world map interactions, routing logic, and scalable architecture**.
+
+---
 
 ## 🚀 Project Objective
 
 CityCleaner aims to:
-- Enable users to find nearby dustbins via an interactive live map
-- Facilitate reporting of dustbin-related issues by citizens
-- Promote public participation in city cleanliness initiatives
-- Deliver a scalable civic-tech solution for urban environments
+- Help users discover nearby public dustbins using an interactive map
+- Provide **distance, ETA, and route visualization** to selected locations
+- Enable citizens to report dustbin-related issues
+- Lay a strong foundation for a scalable civic-tech platform
+
+---
 
 ## 🎨 Design Reference (Figma)
 
-- UI/UX crafted in **Figma** with a focus on intuitive design
-- Flutter implementation mirrors the Figma design closely
-- Consistent design system for bottom sheets, spacing, typography, and layouts
+- UI/UX designed in **Figma**
+- Flutter implementation closely matches Figma layouts
+- Bottom sheets, spacing, typography, and interaction patterns are design-driven
 
-> **Design Workflow:**  
-> Figma Design → UI Breakdown → Reusable Widgets → Flutter Implementation
+> **Workflow:**  
+> Figma → UI Breakdown → Modular Widgets → Flutter Implementation
+
+---
 
 ## 🧱 Tech Stack
 
-| Technology       | Purpose                          |
-|------------------|----------------------------------|
-| Flutter          | Cross-platform mobile framework  |
-| Dart             | Programming language             |
-| flutter_map      | Interactive map rendering        |
-| OpenStreetMap    | Free map tiles                   |
-| Geolocator       | User location services           |
-| Android Emulator | Development and testing          |
-| Figma            | UI/UX design tool                |
-| Git & GitHub     | Version control and collaboration|
+| Technology | Purpose |
+|-----------|--------|
+| Flutter | Cross-platform mobile app |
+| Dart | Application logic |
+| flutter_map | Interactive map rendering |
+| OpenStreetMap | Map tiles |
+| Geolocator | User location & distance |
+| Custom utils | Distance & ETA calculation |
+| Git & GitHub | Version control & collaboration |
+| Figma | UI/UX design |
+
+---
 
 ## 📁 Project Structure
 
-```
 lib/
 ├── core/
-│   ├── theme/
-│   │   └── app_color.dart
-│   └── widgets/
-│       └── app_header.dart
+│ ├── theme/
+│ │ └── app_color.dart
+│ └── widgets/
+│ └── app_header.dart
+│
 ├── features/
-│   ├── map/
-│   │   ├── map_screen.dart
-│   │   ├── map_controls.dart
-│   │   └── map_markers.dart
-│   ├── bottom_sheets/
-│   │   ├── bin_info_sheet.dart
-│   │   ├── share_sheet.dart
-│   │   └── report_sheet.dart
-│   └── sheets/
-│       └── add_bin_sheet.dart
+│ ├── map/
+│ │ ├── map_screen.dart
+│ │ ├── map_controls.dart
+│ │ └── map_markers.dart
+│ │
+│ ├── bottom_sheets/
+│ │ ├── bin_info_sheet.dart
+│ │ ├── share_sheet.dart
+│ │ └── report_sheet.dart
+│ │
+│ └── sheets/
+│ └── add_bin_sheet.dart
+│
 └── main.dart
-```
 
-## ✅ Features Implemented
+---
 
-### 🗺️ Map & UI
-- Seamless integration with OpenStreetMap using `flutter_map`
-- Custom markers for dustbin locations
-- Optimized map rendering for smooth performance
+## ✅ Features Implemented (Verified)
 
-### 📍 Marker Interaction
-- Interactive dustbin markers that trigger bottom sheets on tap
-- Displays distance from user location
-- Estimated travel time (walking, biking, driving)
-- Navigation UI ready for integration
+### 🗺️ Map & Location
+- OpenStreetMap integration using `flutter_map`
+- User current location detection
+- Static dustbin markers
+- Smooth map interactions with zoom & controls
+
+### 📍 Marker Interaction & Navigation
+- Tap on dustbin marker opens a detailed bottom sheet
+- Displays:
+  - Distance from current location
+  - Estimated travel time (Walk / Bike / Car)
+- **Route visualization using polylines**
+- Map auto-adjusts bounds to fit route
+
+### 🧭 Directions & ETA (Phase 5 Complete)
+- Straight-line routing logic
+- Custom ETA calculation based on transport mode
+- Walk, Bike, and Car modes supported
+- No external Directions API dependency
+- Offline-friendly logic
 
 ### 📦 Bottom Sheets
-- **Bin Info Sheet**: Core interaction for bin details
-- **Share Sheet**: Share bin locations
-- **Report Sheet**: Report maintenance issues
-- **Add Bin Sheet**: Basic form for adding new bins
+- **Bin Info Sheet** – core interaction
+- **Report Sheet** – predefined reporting options
+- **Share Sheet** – UI for sharing location
+- **Add Bin Sheet** – basic form for new bins
 
-### 🧩 UI Components
-- Branded custom header
-- Floating action button for quick actions
-- Side-mounted map controls
-- Modular and reusable widget architecture
+### 🧩 UI & Architecture
+- Custom branded app header (CityCleaner)
+- Floating action button for adding bins
+- Right-side map controls
+- Feature-based, scalable folder structure
+- Stateful map handling with mounted-safe async logic
 
 ### 🛠️ Project Stability
-- Resolved Android build configurations
-- Cleaned up duplicate resources
-- Standardized folder structure
-- Fixed imports and widget dependencies
+- Android build issues resolved
+- Resource duplication cleaned
+- Folder structure standardized
+- Git branching & commits follow best practices
 
-## ⚠️ Known Warnings (Non-Critical)
+---
 
-- Emulator performance logs (e.g., skipped frames)
-- OpenGL/EGL rendering messages
-- Impeller-related logs
+## ⚠️ Known Notes
 
-> These are **emulator-specific warnings** and do not affect app functionality on physical devices.
+- Emulator may show frame-skip or OpenGL logs
+- These are **emulator performance warnings**, not app errors
+- App performs smoothly on real devices
 
-## 🧭 Upcoming Features
+---
 
-- 🧭 Turn-by-turn directions with route visualization and ETA
-- 📸 Photo upload for adding new bins
-- 🎉 Success feedback screen ("You are a City Hero!")
-- 📍 Proximity-based bin filtering
-- 🔐 User authentication (optional)
-- ⚡ Performance enhancements and optimizations
+## 🧭 Upcoming Work (Planned)
+
+- 📸 Add bin with photo upload
+- 🎉 Success feedback screen ("You are a City Hero")
+- 📍 Radius-based bin filtering UI polish
+- 🔐 Authentication (after backend integration)
+- 🌐 Backend APIs for real bin data
+- 📦 App icons, splash screen, and release builds
+
+---
 
 ## 🏁 Getting Started
 
 ### Prerequisites
-- Flutter SDK installed ([Installation Guide](https://flutter.dev/docs/get-started/install))
-- Android Studio or Xcode for emulators/simulators
+- Flutter SDK installed
+- Android Studio / Xcode for emulators
 
-### Running the App
+### Run Locally
 ```bash
-# Clean previous builds
 flutter clean
-
-# Install dependencies
 flutter pub get
-
-# Run on connected device or emulator
 flutter run
-```
+👨‍💻 Author
+Prateek Kumar
+Flutter Developer
+📍 India
+📜 License
+This project is built for learning, internship, and portfolio purposes.
+Contributions and experimentation are welcome.
 
-## 👨‍💻 Author
+---
 
-**Prateek Kumar**  
-Flutter Developer 
-📍 India  
+## ✅ WHAT CHANGED vs OLD README (Quick Summary)
 
-## 📜 License
-
-This project is developed for educational and internship purposes.  
-Feel free to fork, experiment, and contribute!
+✔ Added **Directions & Route Visualization**  
+✔ Added **ETA logic explanation**  
+✔ Removed claims that were still "upcoming"  
+✔ Updated branding to **CityCleaner** consistently  
+✔ Reflected **Phase 5 completion honestly**  
+✔ Made README more **portfolio & recruiter friendly**
