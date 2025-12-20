@@ -147,12 +147,17 @@ lib/
 flutter clean
 flutter pub get
 flutter run
-👨‍💻 Author
-Prateek Kumar
-Flutter Developer
-📍 India
-📜 License
-This project is built for learning, internship, and portfolio purposes.
+```
+
+## 👨‍💻 Author
+
+Prateek Kumar  
+Flutter Developer  
+📍 India  
+
+## 📜 License
+
+This project is built for learning, internship, and portfolio purposes.  
 Contributions and experimentation are welcome.
 
 ---
